@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_iBLVgKkyEfCezfPIabYMxA" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_4kWAcKkyEfCezfPIabYMxA" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_scaleItem" structureRef="us.dit.ass.neurologicalassessment.DN4"/>
   <bpmn2:itemDefinition id="_appointmentItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D_SkippableInputXItem" structureRef="Object"/>
@@ -39,7 +39,7 @@
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="_A5127044-E9DC-42F6-AFA6-73E0075E3AAD" sourceRef="_0BA2DA0C-8DE5-417E-A507-B45ECB6D7C63" targetRef="_6935CA23-A36C-47EC-83D2-065DDE438D33"/>
     <bpmn2:sequenceFlow id="_86D2EC5E-2B5E-4E36-8CFA-ACA9ED3493AA" sourceRef="_090800BE-8C31-49A4-BD8B-3F72EE1F6A00" targetRef="_0BA2DA0C-8DE5-417E-A507-B45ECB6D7C63">
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_iBLVgakyEfCezfPIabYMxA" language="http://www.java.com/java"><![CDATA[return KieFunctions.greaterOrEqualThan(scale.getScore(), "4");]]></bpmn2:conditionExpression>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_4kWAcakyEfCezfPIabYMxA" language="http://www.java.com/java"><![CDATA[return KieFunctions.greaterOrEqualThan(scale.getScore(), "4");]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="_C6AD59CE-EC2F-470A-BC03-7B7F5E8B1947" sourceRef="_C7093AB9-A89C-48DD-AF39-DB7C1EFF8898" targetRef="_D1962A2B-067D-408D-A4EF-2B7DCF7EA6A2"/>
     <bpmn2:sequenceFlow id="_48B359F2-0345-4CED-8AE6-880A2DBB1758" sourceRef="_090800BE-8C31-49A4-BD8B-3F72EE1F6A00" targetRef="_C7093AB9-A89C-48DD-AF39-DB7C1EFF8898">
@@ -48,7 +48,7 @@
           <drools:metaValue><![CDATA[true]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_iBLVgqkyEfCezfPIabYMxA" language="http://www.java.com/java"><![CDATA[return KieFunctions.lessThan(scale.getScore(), "4");]]></bpmn2:conditionExpression>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_4kWAcqkyEfCezfPIabYMxA" language="http://www.java.com/java"><![CDATA[return KieFunctions.lessThan(scale.getScore(), "4");]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:exclusiveGateway id="_090800BE-8C31-49A4-BD8B-3F72EE1F6A00" gatewayDirection="Diverging">
       <bpmn2:incoming>_9F2A3044-6B46-44F8-82D9-BE6AD889DD76</bpmn2:incoming>
@@ -56,15 +56,15 @@
       <bpmn2:outgoing>_86D2EC5E-2B5E-4E36-8CFA-ACA9ED3493AA</bpmn2:outgoing>
     </bpmn2:exclusiveGateway>
     <bpmn2:endEvent id="_8131E574-7013-4041-A5FC-5D10BE796459">
-      <bpmn2:terminateEventDefinition id="_iBLVg6kyEfCezfPIabYMxA"/>
+      <bpmn2:terminateEventDefinition id="_4kWAc6kyEfCezfPIabYMxA"/>
     </bpmn2:endEvent>
     <bpmn2:endEvent id="_D1962A2B-067D-408D-A4EF-2B7DCF7EA6A2">
       <bpmn2:incoming>_C6AD59CE-EC2F-470A-BC03-7B7F5E8B1947</bpmn2:incoming>
-      <bpmn2:terminateEventDefinition id="_iBLVhKkyEfCezfPIabYMxA"/>
+      <bpmn2:terminateEventDefinition id="_4kWAdKkyEfCezfPIabYMxA"/>
     </bpmn2:endEvent>
     <bpmn2:endEvent id="_6935CA23-A36C-47EC-83D2-065DDE438D33">
       <bpmn2:incoming>_A5127044-E9DC-42F6-AFA6-73E0075E3AAD</bpmn2:incoming>
-      <bpmn2:terminateEventDefinition id="_iBLVhakyEfCezfPIabYMxA"/>
+      <bpmn2:terminateEventDefinition id="_4kWAdakyEfCezfPIabYMxA"/>
     </bpmn2:endEvent>
     <bpmn2:userTask id="_363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D" name="Pain Assessment with DN4">
       <bpmn2:extensionElements>
@@ -74,39 +74,39 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>_A7D342CB-0708-49BF-8340-B0C458165147</bpmn2:incoming>
       <bpmn2:outgoing>_9F2A3044-6B46-44F8-82D9-BE6AD889DD76</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_iBLVhqkyEfCezfPIabYMxA">
+      <bpmn2:ioSpecification id="_4kWAdqkyEfCezfPIabYMxA">
         <bpmn2:dataInput id="_363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D_TaskNameInputX" drools:dtype="Object" itemSubjectRef="__363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="_363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D_scaleInputX" drools:dtype="us.dit.ass.neurologicalassessment.DN4" itemSubjectRef="__363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D_scaleInputXItem" name="scale"/>
         <bpmn2:dataInput id="_363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D_SkippableInputX" drools:dtype="Object" itemSubjectRef="__363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataOutput id="_363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D_scaleOutputX" drools:dtype="us.dit.ass.neurologicalassessment.DN4" itemSubjectRef="__363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D_scaleOutputXItem" name="scale"/>
-        <bpmn2:inputSet id="_iBLVh6kyEfCezfPIabYMxA">
+        <bpmn2:inputSet id="_4kWAd6kyEfCezfPIabYMxA">
           <bpmn2:dataInputRefs>_363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D_scaleInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D_SkippableInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_iBL8kKkyEfCezfPIabYMxA">
+        <bpmn2:outputSet id="_4kWngKkyEfCezfPIabYMxA">
           <bpmn2:dataOutputRefs>_363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D_scaleOutputX</bpmn2:dataOutputRefs>
         </bpmn2:outputSet>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_iBL8kakyEfCezfPIabYMxA">
+      <bpmn2:dataInputAssociation id="_4kWngakyEfCezfPIabYMxA">
         <bpmn2:targetRef>_363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_iBL8kqkyEfCezfPIabYMxA">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_iBL8k6kyEfCezfPIabYMxA"><![CDATA[AssessDN4]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_iBL8lKkyEfCezfPIabYMxA">_363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_4kWngqkyEfCezfPIabYMxA">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_4kWng6kyEfCezfPIabYMxA"><![CDATA[AssessDN4]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_4kWnhKkyEfCezfPIabYMxA">_363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_iBL8lakyEfCezfPIabYMxA">
+      <bpmn2:dataInputAssociation id="_4kWnhakyEfCezfPIabYMxA">
         <bpmn2:sourceRef>scale</bpmn2:sourceRef>
         <bpmn2:targetRef>_363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D_scaleInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_iBL8lqkyEfCezfPIabYMxA">
+      <bpmn2:dataInputAssociation id="_4kWnhqkyEfCezfPIabYMxA">
         <bpmn2:targetRef>_363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_iBL8l6kyEfCezfPIabYMxA">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_iBL8mKkyEfCezfPIabYMxA"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_iBL8makyEfCezfPIabYMxA">_363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_4kWnh6kyEfCezfPIabYMxA">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_4kWniKkyEfCezfPIabYMxA"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_4kWniakyEfCezfPIabYMxA">_363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataOutputAssociation id="_iBL8mqkyEfCezfPIabYMxA">
+      <bpmn2:dataOutputAssociation id="_4kWniqkyEfCezfPIabYMxA">
         <bpmn2:sourceRef>_363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D_scaleOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>scale</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
@@ -122,6 +122,9 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>_86D2EC5E-2B5E-4E36-8CFA-ACA9ED3493AA</bpmn2:incoming>
       <bpmn2:outgoing>_A5127044-E9DC-42F6-AFA6-73E0075E3AAD</bpmn2:outgoing>
+      <bpmn2:script><![CDATA[DN4 dn4Scale=(DN4) kcontext.getVariable("scale");
+System.out.println("Neuropathic pain");
+System.out.println("Scale Result is "+ dn4Scale.getScore());]]></bpmn2:script>
     </bpmn2:scriptTask>
     <bpmn2:scriptTask id="_C7093AB9-A89C-48DD-AF39-DB7C1EFF8898" name="Log not Neuropatic pain" scriptFormat="http://www.java.com/java">
       <bpmn2:extensionElements>
@@ -131,10 +134,13 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>_48B359F2-0345-4CED-8AE6-880A2DBB1758</bpmn2:incoming>
       <bpmn2:outgoing>_C6AD59CE-EC2F-470A-BC03-7B7F5E8B1947</bpmn2:outgoing>
+      <bpmn2:script><![CDATA[DN4 dn4Scale=(DN4) kcontext.getVariable("scale");
+System.out.println("This is not a Neuropathic Pain");
+System.out.println("Scale result is "+ dn4Scale.getScore());]]></bpmn2:script>
     </bpmn2:scriptTask>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_iBL8m6kyEfCezfPIabYMxA">
-    <bpmndi:BPMNPlane id="_iBL8nKkyEfCezfPIabYMxA" bpmnElement="prueba.neurologicalAssessment">
+  <bpmndi:BPMNDiagram id="_4kWni6kyEfCezfPIabYMxA">
+    <bpmndi:BPMNPlane id="_4kWnjKkyEfCezfPIabYMxA" bpmnElement="prueba.neurologicalAssessment">
       <bpmndi:BPMNShape id="shape__C7093AB9-A89C-48DD-AF39-DB7C1EFF8898" bpmnElement="_C7093AB9-A89C-48DD-AF39-DB7C1EFF8898">
         <dc:Bounds height="102.0" width="154.0" x="1020.0" y="133.0"/>
       </bpmndi:BPMNShape>
@@ -185,12 +191,12 @@
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_iBL8nakyEfCezfPIabYMxA" type="BPSimData">
+  <bpmn2:relationship id="_4kWnjakyEfCezfPIabYMxA" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
           <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_C7093AB9-A89C-48DD-AF39-DB7C1EFF8898" id="_iBL8nqkyEfCezfPIabYMxA">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_C7093AB9-A89C-48DD-AF39-DB7C1EFF8898" id="_4kWnjqkyEfCezfPIabYMxA">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -210,7 +216,7 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_0BA2DA0C-8DE5-417E-A507-B45ECB6D7C63" id="_iBL8n6kyEfCezfPIabYMxA">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_0BA2DA0C-8DE5-417E-A507-B45ECB6D7C63" id="_4kWnj6kyEfCezfPIabYMxA">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -230,14 +236,14 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_02D7A642-EC6D-49D2-90E2-23A0718E7073" id="_iBL8oKkyEfCezfPIabYMxA">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_02D7A642-EC6D-49D2-90E2-23A0718E7073" id="_4kWnkKkyEfCezfPIabYMxA">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
               </bpsim:ProcessingTime>
             </bpsim:TimeParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D" id="_iBL8oakyEfCezfPIabYMxA">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_363A41AE-0E2D-4DD7-A023-7CE9F8D11E7D" id="_4kWnkakyEfCezfPIabYMxA">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -260,7 +266,7 @@
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_iBLVgKkyEfCezfPIabYMxA</bpmn2:source>
-    <bpmn2:target>_iBLVgKkyEfCezfPIabYMxA</bpmn2:target>
+    <bpmn2:source>_4kWAcKkyEfCezfPIabYMxA</bpmn2:source>
+    <bpmn2:target>_4kWAcKkyEfCezfPIabYMxA</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
