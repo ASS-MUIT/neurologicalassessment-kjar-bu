@@ -5,31 +5,195 @@ package us.dit.ass.neurologicalassessment;
  */
 
 @javax.persistence.Entity
+
 public class DN4 implements java.io.Serializable {
 
     static final long serialVersionUID = 1L;
 
     @javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "DN4_ID_GENERATOR")
     @javax.persistence.Id
-    @javax.persistence.SequenceGenerator(name = "DN4_ID_GENERATOR", sequenceName = "DN4_ID_SEQ")
+    @javax.persistence.SequenceGenerator(sequenceName = "DN4_ID_SEQ", name = "DN4_ID_GENERATOR")
     private java.lang.Long id;
 
+    @org.kie.api.definition.type.Label("Does the pain have a burning quality?")
+    private java.lang.Boolean burningPain;
+
+    @org.kie.api.definition.type.Label("Does the pain provoke a painful cold sensation?")
+    private java.lang.Boolean painfulCold;
+
+    @org.kie.api.definition.type.Label("Does the pain feel like electric shocks?")
+    private java.lang.Boolean electricShock;
+
+    @org.kie.api.definition.type.Label("Is the pain associated with tingling in the same area?")
+    private java.lang.Boolean tingling;
+
+    @org.kie.api.definition.type.Label("Is the pain associated with pins and needles in the same area?")
+    private java.lang.Boolean pinsAndNeedles;
+
+    @org.kie.api.definition.type.Label("Is the pain associated with numbness in the same area?")
+    private java.lang.Boolean numbness;
+
+    @org.kie.api.definition.type.Label("Is the pain associated with itching in the same area?")
+    private java.lang.Boolean itching;
+
+    @org.kie.api.definition.type.Label("Does physical examination show hypoesthesia to touch in the painful area?")
+    private java.lang.Boolean touchHypoesthesia;
+
+    @org.kie.api.definition.type.Label("Does physical examination show hypoesthesia to pricks in the painful area?")
+    private java.lang.Boolean prickHypoesthesia;
+
+    @org.kie.api.definition.type.Label("Can the pain be caused or increased by brushing or cotton touch in the painful area?")
+    private java.lang.Boolean brushingPain;
+
+    @org.kie.api.definition.type.Label("Test score")
+    private java.lang.Integer score;
+
     public DN4() {
-    }
-    
-    public DN4(java.lang.Long id) {
-        this.id = id;
     }
 
     public java.lang.Long getId() {
         return this.id;
     }
-    
+
     public void setId(java.lang.Long id) {
         this.id = id;
     }
 
+    public java.lang.Boolean getBurningPain() {
+        return this.burningPain;
+    }
 
+    public void setBurningPain(java.lang.Boolean burningPain) {
+        this.burningPain = burningPain;
+    }
 
+    public java.lang.Boolean getPainfulCold() {
+        return this.painfulCold;
+    }
 
+    public void setPainfulCold(java.lang.Boolean painfulCold) {
+        this.painfulCold = painfulCold;
+    }
+
+    public java.lang.Boolean getElectricShock() {
+        return this.electricShock;
+    }
+
+    public void setElectricShock(java.lang.Boolean electricShock) {
+        this.electricShock = electricShock;
+    }
+
+    public java.lang.Boolean getTingling() {
+        return this.tingling;
+    }
+
+    public void setTingling(java.lang.Boolean tingling) {
+        this.tingling = tingling;
+    }
+
+    public java.lang.Boolean getPinsAndNeedles() {
+        return this.pinsAndNeedles;
+    }
+
+    public void setPinsAndNeedles(java.lang.Boolean pinsAndNeedles) {
+        this.pinsAndNeedles = pinsAndNeedles;
+    }
+
+    public java.lang.Boolean getNumbness() {
+        return this.numbness;
+    }
+
+    public void setNumbness(java.lang.Boolean numbness) {
+        this.numbness = numbness;
+    }
+
+    public java.lang.Boolean getItching() {
+        return this.itching;
+    }
+
+    public void setItching(java.lang.Boolean itching) {
+        this.itching = itching;
+    }
+
+    public java.lang.Boolean getTouchHypoesthesia() {
+        return this.touchHypoesthesia;
+    }
+
+    public void setTouchHypoesthesia(java.lang.Boolean touchHypoesthesia) {
+        this.touchHypoesthesia = touchHypoesthesia;
+    }
+
+    public java.lang.Boolean getPrickHypoesthesia() {
+        return this.prickHypoesthesia;
+    }
+
+    public void setPrickHypoesthesia(java.lang.Boolean prickHypoesthesia) {
+        this.prickHypoesthesia = prickHypoesthesia;
+    }
+
+    public java.lang.Boolean getBrushingPain() {
+        return this.brushingPain;
+    }
+
+    public void setBrushingPain(java.lang.Boolean brushingPain) {
+        this.brushingPain = brushingPain;
+    }
+
+    public java.lang.Integer getScore() {
+        setScore();
+        return this.score;
+    }
+
+    private void setScore() {
+        this.score = burningPain.compareTo(false) +
+                     painfulCold.compareTo(false) +
+                     electricShock.compareTo(false) +
+                     tingling.compareTo(false) +
+                     pinsAndNeedles.compareTo(false) +
+                     numbness.compareTo(false) +
+                     itching.compareTo(false) +
+                     touchHypoesthesia.compareTo(false) +
+                     prickHypoesthesia.compareTo(false) +
+                     brushingPain.compareTo(false);
+    }
+
+    public DN4(java.lang.Long id, java.lang.Boolean burningPain,
+               java.lang.Boolean painfulCold,
+               java.lang.Boolean electricShock, java.lang.Boolean tingling,
+               java.lang.Boolean pinsAndNeedles, java.lang.Boolean numbness,
+               java.lang.Boolean itching, java.lang.Boolean touchHypoesthesia,
+               java.lang.Boolean prickHypoesthesia, java.lang.Boolean brushingPain) {
+        this.id = id;
+        this.burningPain = burningPain;
+        this.painfulCold = painfulCold;
+        this.electricShock = electricShock;
+        this.tingling = tingling;
+        this.pinsAndNeedles = pinsAndNeedles;
+        this.numbness = numbness;
+        this.itching = itching;
+        this.touchHypoesthesia = touchHypoesthesia;
+        this.prickHypoesthesia = prickHypoesthesia;
+        this.brushingPain = brushingPain;
+    }
+
+    public DN4(java.lang.Long id, java.lang.Boolean burningPain,
+               java.lang.Boolean painfulCold,
+               java.lang.Boolean electricShock, java.lang.Boolean tingling,
+               java.lang.Boolean pinsAndNeedles, java.lang.Boolean numbness,
+               java.lang.Boolean itching, java.lang.Boolean touchHypoesthesia,
+               java.lang.Boolean prickHypoesthesia,
+               java.lang.Boolean brushingPain, java.lang.Integer score) {
+        this.id = id;
+        this.burningPain = burningPain;
+        this.painfulCold = painfulCold;
+        this.electricShock = electricShock;
+        this.tingling = tingling;
+        this.pinsAndNeedles = pinsAndNeedles;
+        this.numbness = numbness;
+        this.itching = itching;
+        this.touchHypoesthesia = touchHypoesthesia;
+        this.prickHypoesthesia = prickHypoesthesia;
+        this.brushingPain = brushingPain;
+        this.score = score;
+    }
 }
