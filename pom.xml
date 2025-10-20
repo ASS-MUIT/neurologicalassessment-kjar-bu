@@ -45,12 +45,6 @@
       <version>1.4.20</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>us.dit.muit.hsa</groupId>
-      <artifactId>wih</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
-      <scope>compile</scope>
-    </dependency>
   </dependencies>
   <build>
     <plugins>
