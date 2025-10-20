@@ -12,7 +12,7 @@
     <work-item-handlers>
         <work-item-handler>
             <resolver>mvel</resolver>
-            <identifier>new us.dit.muit.ass.wih.AppointmentDAOWorkItemHandler("", "")</identifier>
+            <identifier>new us.dit.muit.ass.wih.AppointmentDAOWorkItemHandler()</identifier>
             <parameters/>
             <name>AppointmentDAODefinitions</name>
         </work-item-handler>
