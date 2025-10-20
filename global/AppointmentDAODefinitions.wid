@@ -1,0 +1,27 @@
+[
+        [
+            "name" : "AppointmentDAODefinitions",
+            "displayName" : "AppointmentDAODefinitions",
+            "category" : "wih",
+            "description" : "WI for query appointment attributes",
+            "defaultHandler" : "mvel: new us.dit.muit.ass.wih.AppointmentDAOWorkItemHandler()",
+            "documentation" : "wih/index.html",
+
+            "parameters" : [
+                                "URL" : new StringDataType()
+
+            ],
+            "results" : [
+                                "Practitioner" : new StringDataType()
+                ,"Subject" : new StringDataType()
+
+            ],
+            "mavenDependencies" : [
+                                 "us.dit.muit.hsa:wih:0.0.1-SNAPSHOT"
+
+            ],
+            "icon" : "AppointmentDAODefinitions.png"
+
+        ]
+
+]
