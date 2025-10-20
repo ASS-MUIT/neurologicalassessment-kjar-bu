@@ -4,7 +4,7 @@
       <include>true</include>
       <metadata>
         <id>local</id>
-        <url>/opt/jboss/.m2/repository</url>
+        <url>/opt/jboss/wildfly/bin/repositories/kie/global</url>
         <source>LOCAL</source>
       </metadata>
     </repository>
