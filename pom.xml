@@ -49,7 +49,7 @@
       <groupId>us.dit.muit.hsa</groupId>
       <artifactId>wih</artifactId>
       <version>0.0.1-SNAPSHOT</version>
-      <scope>provided</scope>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
   <build>
